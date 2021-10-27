@@ -1,0 +1,527 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color:  rgb(111, 74, 142);
+  font-family: sen;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+/*For mobile*/
+@media only screen and (max-width: 600px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+[class*="col-"] {
+  padding: 15px;
+  float: left;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/**_______________MEDIA QUERYES (HEADER SECTION)___________________**/
+
+@media only screen and (max-width: 600px) {
+
+  .top-bar-image, .top-bar-menu {
+    text-align: center;
+  }
+  .top-bar-menu ul{
+    flex-direction: column;
+  }
+  .top-bar-menu li{
+    font-size: 20px;
+  }
+}
+
+/**_______________HEADER SECTION__________________**/
+
+
+.top-bar ,.top-bar-image{
+  height: 50px;
+}
+.top-bar-image img{
+  height: 100%;
+}
+.top-bar, .top-bar-image, .top-bar-menu{
+  padding: 0px;
+  background-color: black;
+}
+.top-bar-menu{
+  background-color:black;
+}
+.top-bar-menu a{
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+.top-bar-menu ul{
+  margin: 0;
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.top-bar-menu li{
+  margin: 0px 10px;
+}
+/**________________DIV ROWs_________________**/
+@media only screen and (min-width: 768px) {
+  .rowDescription, .top-bar{
+    display: flex;
+    align-items: center;
+  }
+}
+.row h2 ,.rowDescription h2{
+  color: white ;
+  font-size: 2em;
+  padding: 0px;
+  margin: 10px;
+  text-align: center;
+}
+h1{
+  color: white ;
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+  margin: 10px;
+}
+h6{
+  font-size: 1.5em;
+  margin: 5px;
+}
+/**________________SITE DESCRIPTION_________________**/
+.site-logo img{
+  width: 100%;
+}
+.site-descrip p{
+  color: white ;
+  font-size: 20px;
+}
+.ctabutton-row{
+  display: flex;
+  justify-content: space-around;
+}
+.ctabutton {
+  flex-basis: 30%;
+  background-color: skyblue;
+  border: none;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .site-logo {
+    text-align: center;
+  }
+  .site-logo img{
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 905px){
+  .site-descrip p{
+    font-size: 14px;
+  }
+}
+/**_________________CATEGORY ICONS________________**/
+.category-list{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color:   rgb(41, 39, 114);
+}
+.category-icon {
+  flex-basis: 20%;
+  text-align: center;
+}
+.category-icon a, .category-icon a:visited, .category-icon a:active{
+  color: white;
+  text-decoration: none;
+}
+.category-icon img{
+  width: 70px;
+}
+
+/**________________GRID ROW_________________**/
+.grid-row{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.objetivos{
+  height: auto;
+  width: 30%;
+  margin: 10px;
+  border: 5px solid;
+  border-radius: 10%;
+  text-align: center;
+  transition: 1s;
+}
+.objetivos:hover{
+  background-color: olivedrab;
+}
+.objetivos a{
+  text-decoration: none;
+  color: white ;
+}
+.objetivos img{
+  max-width: 90%;
+}
+
+@media only screen and (min-width: 768px){
+  .objetivos:hover{
+    width: 31%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px){
+  .objetivos{
+    width: 45%;
+  }
+  .objetivos:hover{
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 600px){
+  .grid-row{
+    flex-flow: column;
+  }
+  .objetivos{
+    width: 90%;
+  }
+  .objetivos:hover{
+    width: 92%;
+  }
+}
+/**_________________BANNER ADs________________**/
+.bannerAds{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(41, 39, 114);
+}
+.bannerAds h2, .bannerAds li, .bannerAds a{
+  color: white;
+  text-decoration: none;
+}
+@media only screen and (max-width: 768px){
+  .bannerAds{
+    flex-direction: column;
+  }
+}
+/**_________________PROGRAM CLASSES________________**/
+.classprograms{
+  display: flex;
+  justify-content: center;
+}
+.classprograms-logo img{
+  width: 100%;
+}
+.classprograms-logo, .classprograms-descrip{
+  color: white;
+  background-color: rgb(137, 183, 98);
+}
+
+@media only screen and (min-width: 768px){
+  .classprograms-descrip{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .classprograms-logo{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .cp-des-1 {
+    margin-right: 40px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 767px){
+  .classprograms{
+    flex-wrap: wrap;
+  }
+  .cp-des-1, .cp-des-2, .cp-logo-1, .cp-logo-2 {
+    padding: 5%;
+    width: 50%;
+  }
+  .cp-logo-1{
+    border-top-left-radius: 20px;
+    order: 1;
+  }
+  .cp-logo-2{
+    border-top-right-radius: 20px;
+    order: 2;
+  }
+  .cp-des-1{
+    border-bottom-left-radius: 20px;
+    order: 3;
+  }
+  .cp-des-2{
+    border-bottom-right-radius: 20px;
+    order: 4;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .classprograms{
+    flex-direction: column;
+    text-align: center;
+  }
+  .classprograms-logo img{
+    width: 50%;
+  }
+  .classprograms-descrip{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .classprograms-logo{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .cp-des-1 {
+    margin-bottom: 40px;
+  }
+}
+/**________________PUBLICACIONES________________**/
+.post{
+  height: auto;
+  width: 20%;
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  transition: 1s;
+}
+.post:hover{
+  background-color: whitesmoke;
+}
+.post a{
+  text-decoration: none;
+  color: black ;
+}
+.post-oculto{
+  display: none;
+}
+@media only screen and (min-width: 768px){
+  .post:hover{
+    width: 21%;
+  }
+}
+@media only screen and (max-width: 768px){
+  .post{
+    width: 28%;
+  }
+  .post:hover{
+    width: 30%;
+  }
+  .post h6{
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 600px){
+  .grid-row{
+    flex-flow: column;
+  }
+  .post{
+    width: 90%;
+  }
+  .post:hover{
+    width: 92%;
+  }
+}
+
+/**_________________COMMENT FORM________________**/
+.comment-form input, textarea{
+  width: 100%;
+  height: 2.5em;
+}
+textarea{
+  max-width: 100%;
+  min-height: 5em;
+}
+
+input[type*="submit"]{
+  width: 50%;
+  height: 40px;
+  background-color: seagreen;
+  transition: 1s;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+input[type*="submit"]:hover{
+  background-color: yellowgreen;
+  width: 52%;
+  height: 45px;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+}
+.comment-form label, .comment-form h2{
+  color: white;
+}
+
+/**________________FOOTER SECTION_________________**/
+footer{
+  background-color: black;
+  color: grey;
+}
+.widgets-area{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/**________________FIND US_________________**/
+.findus-address>p{
+  font-size: 18px;
+  font-weight: bold;
+}
+.findus-address a{
+  text-decoration: none;
+  color: grey;
+}
+/**_________________NEWS FORM________________**/
+.news-form input[type*=email]{
+  width: 100%;
+  height: 2em;
+}
+
+.news-form input[type*="submit"]{
+  background-color: seagreen;
+  height: 30px;
+  width: 70px;
+  transition: 1s;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+.news-form input[type*="submit"]:hover{
+  background-color: yellowgreen;
+  height: 35px;
+  width: 75px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+}
+/**_________________FOLLOW ICONS________________**/
+.follow-list{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.follow-list h2{
+  height: 20px;
+  flex-basis: 100%;
+}
+.follow-icon{
+  width: 10%;
+}
+.follow-icon img{
+  width: 100%;
+}
+@media only screen and (max-width: 768px){
+  .follow-list h2{
+    display: none;
+  }
+}
+/*
+FlexBox CSS rules for flex-container
+display:flex;
+justify-content Horizontally aligns the flex items when the items do not use all available space on the main-axis
+align-items     Vertically aligns the flex items when the items do not use all available space on the cross-axis
+align-content   Modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines
+flex-direction  Specifies the direction of the flexible items inside a flex container
+flex-wrap       Specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line
+flex-flow       A shorthand property for flex-direction and flex-wrap
+
+Flexbox CSS rules for flex-container child Items
+align-self      Specifies the alignment for a flex item (overrides the flex container's align-items property)
+flex-basis      Specifies the initial length of a flex item
+flex-grow       Specifies how much a flex item will grow relative to the rest of the flex items inside the same container
+flex-shrink     Specifies how much a flex item will shrink relative to the rest of the flex items inside the same container
+flex            A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties
+order           Specifies the order of the flex items inside the same container
+
+height values on CSS
+height: 100vh; 100% del tamaño de la pantalla del viewport
+
+transform DIVs
+transform: translateX(25%); El div se mueve hacia la derecha un 25%
+transform: translateY(25%); El div se mueve hacia abajo un 25%
+transform: scaleX(50%); El div se redimensiona a la mitad de su ancho original
+transform: scaleY(50%); El div se redimensiona a la mitad de su altura original
+transform: rotate(45deg); El div rota
+transform: skew(5deg); El div se tuerce
+
+Animaciones
+div{
+  transition: 1.5s;
+}
+div:hover{
+  transform: rotate(360deg);
+  width: 200px;
+  height: 200px;
+  background-color:chartreus;
+  border-radius: 10%;
+}
+
+div{
+  width: 200px;
+  height: 200px;
+  background-image: url(../pajaros.jpg);
+  filter: greyscale(10%);
+  transition: 1s;
+}
+div:hover{
+  filter: greyscale(0%);
+  background-position: left;
+}
+
+@keyframes animaciondeRotar{
+0%{
+  background-image: url(../yugioh-fondo.jpg);
+}
+50%{
+  transform: rotateZ(180deg);
+}
+100%{
+  background-image: url(../yugioh-frente.jpg);
+}
+}
+*/
